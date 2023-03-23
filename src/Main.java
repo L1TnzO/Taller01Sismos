@@ -64,9 +64,17 @@ public class Main {
         return mayorSismo;
     }
 
-    public static int contarSismos(double[][] sismos){
-        System.out.println("No alcanzó el presupuesto ;(.");
-        int contador = 100;
+    public static int contarSismos(double[][] sismos) {
+        int contador = 0;
+
+        for (int i = 0; i < 7; i++) {
+            for (int j = 0; j < 24; j++) {
+                if (sismos[i][j] >= 5.0) {
+                    contador++;
+                }
+            }
+        }
+
         return contador;
     }
 
