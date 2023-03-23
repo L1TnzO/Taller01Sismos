@@ -48,9 +48,19 @@ public class Main {
         return sismos;
     }
 
-    public static double buscarMayorSismo(double[][] sismos){
-        System.out.println("Sismos buscados");
-        double mayorSismo = 100;
+    public static double buscarMayorSismo(double[][] sismos) {
+        double mayorSismo = 0;
+        int filas = sismos.length;
+        int columnas = sismos[0].length;
+
+        for (int i = 0; i < filas; i++) {
+            for (int j = 0; j < columnas; j++) {
+                if (sismos[i][j] > mayorSismo) {
+                    mayorSismo = sismos[i][j];
+                }
+            }
+        }
+
         return mayorSismo;
     }
 
