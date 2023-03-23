@@ -36,20 +36,33 @@ public class Main {
 
         scanner.close();
     }
-    public static void ingresarDatos(String[] args){
-        System.out.println("Datos ingresados.");
+    public static double[][] ingresarDatos() {
+        double[][] sismos = new double[7][24];
+
+        for (int i = 0; i < 7; i++) {
+            for (int j = 0; j < 24; j++) {
+                sismos[i][j] = Math.random() * 9.9;
+            }
+        }
+
+        return sismos;
     }
 
-    public static void buscarMayorSismo(String[] args){
+    public static double buscarMayorSismo(double[][] sismos){
         System.out.println("Sismos buscados");
+        double mayorSismo = 100;
+        return mayorSismo;
     }
 
-    public static void contarSismos(String[] args){
+    public static int contarSismos(double[][] sismos){
         System.out.println("Sismos contados.");
+        int contador = 100;
+        return contador;
     }
 
-    public static void enviarSMS(String[] args){
+    public static void enviarSMS(double[][] sismos){
         System.out.println("Alerta");
+        double mayorSismo = 100;
     }
 
 }
